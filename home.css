@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+    
+    body{
+        background-image: url("images/home.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 700px;
+        min-width: 100%;
+    }
+    
+
+.container-fluid{
+      float: right;
+}

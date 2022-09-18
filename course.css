@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+/*.card-group{
+    justify-content: space-evenly;
+}
+.row{
+  margin: center;
+}
+button{
+    
+    background-color: black;
+}
+button a{
+    text-decoration: none;
+    color: aqua;
+}
+button a:hover{
+    color: brown;
+}*/
+.flip-box{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.flip-box-front,
+.flip-box-back{
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 300px;
+    transition:transform 0.7s cubic-bezier(.4,.2,.2,.1);
+    backface-visibility: hidden;
+    
+}
+.flip-box-front{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+     background-image:url(images/oops.png);
+     
+}
+.flip-box:hover .flip-box-front{
+         transform: rotateY(-180deg);
+         transform-style: preserve-3d;
+}
+.flip-box-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+.flip-box:hover .flip-box-back{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+.flip-box .inner{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 60px;
+    outline: 1px solid transparent;
+    perspective:inherit ;
+    z-index: 2;
+    transform: translateY(-50%) translateZ(60px) scale(.94);
+    top: 50%;
+}
+.flip-box-button{
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    color: gray;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 15px 50px;
+    text-transform: uppercase;
+}
+.flip-box-button a{
+    text-decoration: none;
+    color: grey;
+}
+.flip-box-button a:hover{
+    color:red;
+
+}

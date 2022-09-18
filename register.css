@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+width: 100%;
+height: 100%;
+}
+body{
+    background-image: url("images/ro.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+form{
+    width: 30%;
+height: 600px;
+max-width: 500px;
+margin: auto;
+justify-content: center;
+box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+background: rgba(255,255,255,0.06);
+border-radius: 30px;
+border-left: 1px solid rgba(255,255,255,0.3);
+border-top: 1px solid rgba(255,255,255,0.3);
+border-bottom: 1px solid rgba(255,255,255,0.3);
+border-right: 1px solid rgba(255,255,255,0.3);
+font-size: larger;
+opacity: 0.8;
+backdrop-filter: blur;
+display: grid;
+grid-template-columns: 4;
+
+}
+input{
+    height: 40px;
+}
+.checkbox{
+    font-size: small;
+    margin:left;
+    justify-content: left;
+
+}
+button{
+    width: 50%;
+    color: aqua;
+    margin-left: 30%;
+}
+button:active{
+    background: red;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
+button a:hover{
+    color: red;
+}

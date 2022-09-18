@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>form</title>
+</head>
+<body>
+    <div class="panda">
+        <div class="ear"></div>
+        <!--face-->
+        <div class="face">
+            <div class="eye-shade"></div>
+            <div class="eye-white">
+                <div class="eye-ball"></div>
+            </div>
+            <div class="eye-shade rgt"></div>
+            <div class="eye-white rgt">
+                <div class="eye-ball"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+
+        </div>
+        <!--end of the face-->
+        <!--body-->
+        <div class="panda-body"></div>
+        <div class="foot">
+            <div class="fingers">
+               
+            </div>
+            <div class="foot-rgt">
+                <div class="fingers"></div>
+    </div>
+    </div>
+    
+    <form>
+        <!--hand design-->
+    <div class="hand">
+        
+        <span class="hand-left"></span>
+        <span class="hand-left1"></span>
+        <div class="hand-rgt">
+            <span class="hand-rgt1"></span>
+        <span class="hand-rgt2"></span>
+        
+        </div>
+        
+    </div>
+    <h3>conformation FORM</h3>
+        <input type="email" placeholder="email">
+        <input type="password" placeholder="password" id="password">
+        
+        <button type="submit" class="btn">login</button>
+    </form>
+    </div>
+    <script>
+        
+        $('#password').focusin(function(){
+            $('form').addClass('up')
+        });
+           //panda eye move
+           $(document).on("mousemove", function( event){
+             var dw=$(document).width()/15;
+             var dh=$(document).height()/15;
+             var x=event.pageX/dw;
+             var y=event.pageY/dh;
+             $('.eye.ball').css({
+                 width:x,
+                 height:y
+             });
+           });
+           //validation
+           $('.btn').click(function(){
+               $('form').addClass('wrong-entry');
+               setTimeout(function(){
+                   $('form').removeClass('wrong-entry');
+               });
+           })
+        </script>
+
+</body>
+</html>
